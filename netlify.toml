@@ -1,0 +1,33 @@
+# Configuración para Netlify
+[build]
+  # Carpeta que se publica (la raíz del proyecto)
+  publish = "."
+  
+  # Carpeta donde están las funciones serverless
+  functions = "netlify/functions"
+  
+  # Comando de build (no necesario para sitio estático)
+  command = "echo 'Static site - no build required'"
+
+# Headers de seguridad y CORS
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "DENY"
+    X-Content-Type-Options = "nosniff"
+    X-XSS-Protection = "1; mode=block"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+
+# Headers específicos para las funciones
+[[headers]]
+  for = "/.netlify/functions/*"
+  [headers.values]
+    Access-Control-Allow-Origin = "*"
+    Access-Control-Allow-Headers = "Content-Type"
+    Access-Control-Allow-Methods = "GET, POST, OPTIONS"
+
+# Redirecciones
+[[redirects]]
+  from = "/api/*"
+  to = "/.netlify/functions/:splat"
+  status = 200
