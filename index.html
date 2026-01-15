@@ -397,7 +397,12 @@
         <div
           class="glass p-8 md:p-10 rounded-2xl border border-slate-700/50 shadow-2xl shadow-cyan-500/10 hover:shadow-purple-500/20 transition-all duration-500"
         >
-          <form id="contactForm" class="space-y-6" action="/api/send-email">
+          <form
+            id="contactForm"
+            class="space-y-6"
+            action="/api/send-email"
+            method="post"
+          >
             <!-- Name Input -->
             <div class="group">
               <label
