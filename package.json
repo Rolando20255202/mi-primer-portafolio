@@ -1,0 +1,26 @@
+{
+  "name": "mi-primer-portafolio",
+  "version": "1.0.0",
+  "description": "Portafolio web profesional con formulario de contacto integrado",
+  "main": "index.html",
+  "scripts": {
+    "dev": "netlify dev",
+    "build": "echo 'No build step required for static site'",
+    "deploy": "netlify deploy --prod"
+  },
+  "keywords": [
+    "portfolio",
+    "web",
+    "html",
+    "tailwindcss",
+    "netlify"
+  ],
+  "author": "Rolando",
+  "license": "MIT",
+  "dependencies": {
+    "resend": "^3.2.0"
+  },
+  "devDependencies": {
+    "netlify-cli": "^17.0.0"
+  }
+}

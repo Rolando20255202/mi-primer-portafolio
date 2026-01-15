@@ -47,7 +47,7 @@ exports.handler = async (event, context) => {
     // Enviar el email
     const emailData = await resend.emails.send({
       from: "onboarding@resend.dev",
-      to: "tu@gmail.com",
+      to: "rolandochoqueparco099@gmail.com",
       subject: `Nuevo mensaje de contacto de ${name}`,
       html: `
         <!DOCTYPE html>
